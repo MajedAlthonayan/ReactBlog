@@ -5,23 +5,25 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null);
 
-    const[isPending, setIsPending] = useState(true);
+    const [isPending, setIsPending] = useState(true);
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogs')
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                setBlogs(data);
-                setIsPending(false);
-            })
+        setTimeout(() => {
+            fetch('http://localhost:8000/blogs')
+                .then(res => {
+                    return res.json();
+                })
+                .then(data => {
+                    setBlogs(data);
+                    setIsPending(false);
+                })
+        }, 1000);
     }, []);
     return (
         <div className="home">
-        {isPending && <div>Loading...</div>}
-        {/* Doesn't bother if first is false, therefore null is not passed to bloglist */}
+            {isPending && <div>Loading...</div>}
+            {/* Doesn't bother if first is false, therefore null is not passed to bloglist */}
             {blogs && <BlogList blogs={blogs} title="All Teams:" />}
         </div>
 
