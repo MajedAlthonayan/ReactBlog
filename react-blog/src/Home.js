@@ -5,10 +5,9 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null);
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
+    const[isPending, setIsPending] = useState(true);
+
+
     useEffect(() => {
         fetch('http://localhost:8000/blogs')
             .then(res => {
@@ -16,12 +15,14 @@ const Home = () => {
             })
             .then(data => {
                 setBlogs(data);
+                setIsPending(false);
             })
     }, []);
     return (
         <div className="home">
+        {isPending && <div>Loading...</div>}
         {/* Doesn't bother if first is false, therefore null is not passed to bloglist */}
-            {blogs && <BlogList blogs={blogs} title="All Teams:" handleDelete={handleDelete} />}
+            {blogs && <BlogList blogs={blogs} title="All Teams:" />}
         </div>
 
     );
