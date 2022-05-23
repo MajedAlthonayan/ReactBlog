@@ -10,7 +10,7 @@ const Home = () => {
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
             {/* Doesn't bother if first is false, therefore null is not passed to bloglist */}
-            {blogs && <BlogList blogs={blogs} title="All Teams:" />}
+            {blogs && <BlogList blogs={blogs} title="All F1 Teams:" />}
         </div>
 
     );
