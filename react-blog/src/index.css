@@ -47,7 +47,7 @@
 
 .blog-preview h2{
   font-size: 20px;
-  color: red;
+  /* color: red; */
   margin-bottom: 8px;
 }
 
@@ -55,6 +55,46 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+}
+
+.id1{
+  color: red;
+}
+
+.id2{
+  color: teal;
+}
+
+.id3{
+  color: navy;
+}
+
+.id4{
+  color: orange;
+}
+
+.id5{
+  color: hotpink;
+}
+
+.id6{
+  color: darkgreen;
+}
+
+.id7{
+  color: lightskyblue;
+}
+
+.id8{
+  color: darkred;
+}
+
+.id9{
+  color: blue;
+}
+
+.id10{
+  color: crimson; 
 }
 
 .blog-details h2{
