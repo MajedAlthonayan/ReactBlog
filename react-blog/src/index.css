@@ -33,6 +33,13 @@
   margin: 40px auto;
   padding: 20px;
 }
+.blog-list h1{
+  font-size: 40px;
+  color: black ;
+  margin-bottom: 10px;
+
+}
+
 
 .blog-preview {
   
@@ -47,7 +54,6 @@
 
 .blog-preview h2{
   font-size: 20px;
-  /* color: red; */
   margin-bottom: 8px;
 }
 
