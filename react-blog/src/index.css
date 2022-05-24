@@ -106,3 +106,25 @@
   cursor: pointer;
 }
  
+.not-found h2{
+  font-size: 30px;
+  color: red;
+  margin-bottom: 30px;
+}
+
+.not-found p{
+  font-size: 30px;
+  color:black;
+  margin-bottom: 30px;
+
+}
+
+.not-found a{
+  background: red;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
